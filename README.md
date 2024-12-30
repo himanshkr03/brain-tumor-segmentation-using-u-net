@@ -95,36 +95,42 @@ This project can be further extended and improved in several directions:
 ## 7. Installation and Usage
 
 1. **Install Dependencies:**
-2. **Download Dataset:**
+## **2. Download Dataset**
 
-   **Step 1: Create a Kaggle Account and Obtain API Token**
-      - If you don't have a Kaggle account, create one on the Kaggle website.
-      - Go to your Kaggle account settings and generate an API token. This will download a `kaggle.json` file containing your API credentials.
+Follow the steps below to download and set up the BraTS2020 dataset using the Kaggle API:
 
-   **Step 2: Place API Token in Colab**
-      - Upload the `kaggle.json` file to your Google Colab environment.
-      - In a code cell, create the necessary directories and move the file:
-      - import os
-      - from google.colab import files
-  
-'''python
-import os
-from google.colab import files
+---
 
-# Upload the kaggle.json file
-uploaded = files.upload()
+### **Step 1: Create a Kaggle Account and Obtain API Token**
+1. If you don't already have a Kaggle account, [create one here](https://www.kaggle.com/).
+2. Navigate to your **Account Settings** on the Kaggle website.
+3. Generate an API token by clicking on **"Create New API Token"**.
+4. A `kaggle.json` file containing your API credentials will be downloaded.
 
-# Create the .kaggle directory
-os.makedirs('/root/.kaggle', exist_ok=True)
+---
 
-# Move kaggle.json to the .kaggle directory
-!mv kaggle.json /root/.kaggle/
+### **Step 2: Place API Token in Colab**
+1. Upload the `kaggle.json` file to your Google Colab environment.
+2. Use the following Python code to set up the Kaggle API:
 
-# Set permissions
-!chmod 600 /root/.kaggle/kaggle.json
+   ```python
+   import os
+   from google.colab import files
 
-print("Kaggle API token has been set up!")
-'''
+   # Upload the kaggle.json file
+   uploaded = files.upload()
+
+   # Create the .kaggle directory
+   os.makedirs('/root/.kaggle', exist_ok=True)
+
+   # Move kaggle.json to the .kaggle directory
+   !mv kaggle.json /root/.kaggle/
+
+   # Set permissions
+   !chmod 600 /root/.kaggle/kaggle.json
+
+   print("Kaggle API token has been set up!")
+
 **Step 3: Download the BraTS2020 Dataset**
       - Use the following command in a code cell to download the dataset using the Kaggle API:
 # Install Kaggle API if not already installed
