@@ -95,7 +95,56 @@ This project can be further extended and improved in several directions:
 ## 7. Installation and Usage
 
 1. **Install Dependencies:**
-2. **Download Dataset:** Download the BraTS2020 dataset from the official source.
+2. **Download Dataset:**
+
+   **Step 1: Create a Kaggle Account and Obtain API Token**
+      - If you don't have a Kaggle account, create one on the Kaggle website.
+      - Go to your Kaggle account settings and generate an API token. This will download a `kaggle.json` file containing your API credentials.
+
+   **Step 2: Place API Token in Colab**
+      - Upload the `kaggle.json` file to your Google Colab environment.
+      - In a code cell, create the necessary directories and move the file:
+      - import os
+      - from google.colab import files
+  
+import os
+from google.colab import files
+
+# Upload the kaggle.json file
+uploaded = files.upload()
+
+# Create the .kaggle directory
+os.makedirs('/root/.kaggle', exist_ok=True)
+
+# Move kaggle.json to the .kaggle directory
+!mv kaggle.json /root/.kaggle/
+
+# Set permissions
+!chmod 600 /root/.kaggle/kaggle.json
+
+print("Kaggle API token has been set up!")
+
+
+**Step 3: Download the BraTS2020 Dataset**
+      - Use the following command in a code cell to download the dataset using the Kaggle API:
+# Install Kaggle API if not already installed
+!pip install -q kaggle
+
+# Download the dataset
+!kaggle datasets download -d awsaf49/brats2020-training-data
+
+print("Dataset downloaded successfully!")
+
+**Step 4: Unzip the Dataset**
+      - Unzip the downloaded file (`brats2020-training-data.zip`) using the following command:
+import zipfile
+
+# Unzip the dataset
+with zipfile.ZipFile("brats2020-training-data.zip", 'r') as zip_ref:
+    zip_ref.extractall("brats2020")
+
+print("Dataset unzipped successfully!")
+
 3. **Run Notebook:** Execute the Jupyter notebook to train and evaluate the model.
 4. **Load Trained Model:** Use `keras.models.load_model` to load the saved model for inference.
 5. **Preprocess Input:** Preprocess the input MRI scans using the same steps as in the training pipeline.
