@@ -142,7 +142,7 @@ Run the following Python code to download the dataset using the Kaggle API:
 !kaggle datasets download -d awsaf49/brats2020-training-data
 
 print("Dataset downloaded successfully!")
-
+```
 ### **Step 4: Unzip the Dataset**
 Unzip the downloaded dataset (`brats2020-training-data.zip`) using the following Python code:
 
@@ -154,7 +154,7 @@ with zipfile.ZipFile("brats2020-training-data.zip", 'r') as zip_ref:
     zip_ref.extractall("brats2020")
 
 print("Dataset unzipped successfully!")
-
+```
 3. **Run Notebook:** Execute the Jupyter notebook to train and evaluate the model.
 4. **Load Trained Model:** Use `keras.models.load_model` to load the saved model for inference.
 5. **Preprocess Input:** Preprocess the input MRI scans using the same steps as in the training pipeline.
