@@ -107,6 +107,7 @@ This project can be further extended and improved in several directions:
       - import os
       - from google.colab import files
   
+'''python
 import os
 from google.colab import files
 
@@ -123,8 +124,7 @@ os.makedirs('/root/.kaggle', exist_ok=True)
 !chmod 600 /root/.kaggle/kaggle.json
 
 print("Kaggle API token has been set up!")
-
-
+'''
 **Step 3: Download the BraTS2020 Dataset**
       - Use the following command in a code cell to download the dataset using the Kaggle API:
 # Install Kaggle API if not already installed
