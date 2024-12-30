@@ -95,21 +95,20 @@ This project can be further extended and improved in several directions:
 ## 7. Installation and Usage
 
 1. **Install Dependencies:**
-## **2. Download Dataset**
+2. **Download Dataset**
 
 Follow the steps below to download and set up the BraTS2020 dataset using the Kaggle API:
 
 ---
 
-### **Step 1: Create a Kaggle Account and Obtain API Token**
+ **Step 1: Create a Kaggle Account and Obtain API Token**
 1. If you don't already have a Kaggle account, [create one here](https://www.kaggle.com/).
 2. Navigate to your **Account Settings** on the Kaggle website.
 3. Generate an API token by clicking on **"Create New API Token"**.
 4. A `kaggle.json` file containing your API credentials will be downloaded.
 
 ---
-
-### **Step 2: Place API Token in Colab**
+**Step 2: Place API Token in Colab**
 1. Upload the `kaggle.json` file to your Google Colab environment.
 2. Use the following Python code to set up the Kaggle API:
 
@@ -131,7 +130,7 @@ Follow the steps below to download and set up the BraTS2020 dataset using the Ka
 
    print("Kaggle API token has been set up!")
 
-### **Step 3: Download the BraTS2020 Dataset**
+ **Step 3: Download the BraTS2020 Dataset**
 Run the following Python code to download the dataset using the Kaggle API:
 
 ```python
@@ -143,7 +142,7 @@ Run the following Python code to download the dataset using the Kaggle API:
 
 print("Dataset downloaded successfully!")
 ```
-### **Step 4: Unzip the Dataset**
+ **Step 4: Unzip the Dataset**
 Unzip the downloaded dataset (`brats2020-training-data.zip`) using the following Python code:
 
 ```python
