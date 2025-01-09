@@ -6,7 +6,7 @@ Brain tumors are a significant health concern, and their accurate and timely det
 
 ## 2. Dataset
 
-The project utilizes the BraTS2020 dataset, a publicly available collection of multimodal MRI scans of glioma patients. Each patient's data comprises four MRI modalities: T1, T1ce, T2, and T2-FLAIR. Expert-annotated segmentation masks are provided for each scan, delineating the tumor into sub-regions.
+The project utilizes the BraTS2020 dataset, a publicly available collection of multimodal MRI scans of glioma patients. Each patient's data comprises four MRI modalities: T1, T1ce, T2, and T2-FLAIR. Expert-annotated segmentation masks are provided for each scan, delineating the tumor into sub-regions. 
 
 **Modalities:**
 
