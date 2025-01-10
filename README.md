@@ -1,4 +1,4 @@
-# Brain Tumor Segmentation using U-Net
+# NeuroMap-Tumor-Localization-Using-2D-U-Net
 
 ## 1. Introduction
 
